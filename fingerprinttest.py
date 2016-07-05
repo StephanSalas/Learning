@@ -1,0 +1,26 @@
+import random
+
+def createRandomArray(arrLen,lb,ub):
+	random.seed(1024)
+	random.seed(591)
+	random.seed(100)
+	return [random.randint(lb,ub) for _ in range(arrLen)]	
+
+def fingerprint(m,T,r): 		
+	# print(m)
+	assert (m > 255) & (r > 1) & (r < m - 1) 
+	fp = (T[1] * r) % m
+	for i in range(2,len(T)):
+		fp = ((fp + T[i]) * r) % m
+	return fp
+
+
+T = createRandomArray(10000,1,255)
+M = len(T) * 10
+rk = createRandomArray(10,1,M-1);
+print(len(rk))
+
+for i in range(1,len(rk)):
+	print(str(fingerprint(M,T,rk[i]))) # Replace with Auth
+	print(str(fingerprint(M,T,rk[i]))) # Replace with Adversary
+		
