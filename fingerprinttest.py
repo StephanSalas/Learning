@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import random
 
 def createRandomArray(arrLen,lb,ub):
@@ -58,5 +57,4 @@ print(len(rk))
 for i in range(1,len(rk)):
 	print(str(fingerprint(M,T,rk[i]))) # Replace with Auth
 	print(str(fingerprint(M,T,rk[i]))) # Replace with Adversary
->>>>>>> 3d944ac08fe98a8c64be22ea2907a8111ea458ac
 		
